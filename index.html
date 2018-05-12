@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>WebAudioAPI</title>
+<link rel="stylesheet" href="wa.css">
+<script src="wa.js"></script>
+</head>
+<body>
+<button id="start">start</button>
+<div id="mainWindow">
+<h1>WebAudio API</h1>
+<table id="mainTbl">
+<tr>
+<td><button id="play">NoteOn</button></td>
+<td rowspan="3">
+<svg
+        width="400"
+        height="256"
+        xmlns="http://www.w3.org/2000/svg"
+        baseProfile="full"
+>
+	<rect x0="0" yo="0" width="400" height="256" fill="gray" />
+	<path id="grLine" stroke="#00F23E" stroke-width="3" fill="none"></path>
+</svg>
+<svg
+        width="400"
+        height="256"
+        xmlns="http://www.w3.org/2000/svg"
+        baseProfile="full"
+>
+	<rect x0="0" yo="0" width="400" height="256" fill="gray" />
+	<path id="grLine2" stroke="#00F23E" stroke-width="3" fill="none"></path>
+</svg>
+
+<div>
+<button id="scopeBtn">stop</button></div>
+</td>
+</tr>
+<tr>
+<td id="oscType">
+sine<input name="oType" class="oType" type="radio" value="sine" checked='checked' />
+square<input name="oType" class="oType" type="radio" value="square" />
+sawtooth<input name="oType" class="oType" type="radio" value="sawtooth" />
+triangle<input name="oType" class="oType" type="radio" value="triangle" />
+custom<input name="oType" class="oType" type="radio" value="custom" />
+</td>
+</tr>
+<tr>
+<td>
+<table id="cstmWv">
+<thead><tr><td></td><td>real</td><td>image</td></tr></thead>
+<tfoot><tr><td><button id="cstmWvFrmInit">init</button></td></tr></tfoot>
+<tbody id="cstmWvFrm">
+<tr><td>1</td><td><input type="range" value="100" list="exlist" /></td><td><input type="range" list="exlist" /></td></tr>
+<tr><td>2</td><td><input type="range" list="exlist" /></td><td><input type="range" list="exlist" /></td></tr>
+<tr><td>3</td><td><input type="range" list="exlist" /></td><td><input type="range" list="exlist" /></td></tr>
+<tr><td>4</td><td><input type="range" list="exlist" /></td><td><input type="range" list="exlist" /></td></tr>
+<tr><td>5</td><td><input type="range" list="exlist" /></td><td><input type="range" list="exlist" /></td></tr>
+<tr><td>6</td><td><input type="range" list="exlist" /></td><td><input type="range" list="exlist" /></td></tr>
+<tr><td>7</td><td><input type="range" list="exlist" /></td><td><input type="range" list="exlist" /></td></tr>
+<tr><td>8</td><td><input type="range" list="exlist" /></td><td><input type="range" list="exlist" /></td></tr>
+<tr><td>9</td><td><input type="range" list="exlist" /></td><td><input type="range" list="exlist" /></td></tr>
+<tr><td>10</td><td><input type="range" list="exlist" /></td><td><input type="range" list="exlist" /></td></tr>
+<tr><td>11</td><td><input type="range" list="exlist" /></td><td><input type="range" list="exlist" /></td></tr>
+<tr><td>12</td><td><input type="range" list="exlist" /></td><td><input type="range" list="exlist" /></td></tr>
+<tr><td>13</td><td><input type="range" list="exlist" /></td><td><input type="range" list="exlist" /></td></tr>
+<tr><td>14</td><td><input type="range" list="exlist" /></td><td><input type="range" list="exlist" /></td></tr>
+<tr><td>15</td><td><input type="range" list="exlist" /></td><td><input type="range" list="exlist" /></td></tr>
+<tr><td>16</td><td><input type="range" list="exlist" /></td><td><input type="range" list="exlist" /></td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+<datalist id="exlist">
+  <option value="25">25</option>
+  <option value="50">50</option>
+  <option value="75">75</option>
+</datalist>
+</div>
+</body>
+</html>
